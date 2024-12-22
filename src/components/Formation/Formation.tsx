@@ -3,15 +3,15 @@ import { EducationCard } from './EducationCard';
 
 const education = [
   {
-    institution: 'Stanford University',
-    degree: 'Master of Science in Computer Science',
-    period: '2018 - 2020',
+    institution: 'Ecole Superieure Polytechnique de Dakar (ESP)',
+    degree: 'Professional degree in Software Engineering and Operating System',
+    period: '2023 - 2024',
     description: 'Specialized in Artificial Intelligence and Machine Learning. Conducted research on deep learning applications in computer vision.'
   },
   {
-    institution: 'MIT',
-    degree: 'Bachelor of Science in Computer Science',
-    period: '2014 - 2018',
+    institution: 'Ecole Superieure Polytechnique de Dakar (ESP)',
+    degree: 'Higher Diploma in Technology',
+    period: '2021 - 2023',
     description: 'Graduated with honors. Focus on software engineering and distributed systems.'
   },
   {
