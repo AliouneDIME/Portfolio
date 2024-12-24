@@ -12,15 +12,11 @@ export function Contact() {
               <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-blue-600" />
-                <span>your.email@example.com</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-blue-600" />
-                <span>+1 (555) 123-4567</span>
+                <span>aliounedime92@gmail.com</span>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-blue-600" />
-                <span>San Francisco, CA</span>
+                <span>Dakar , SN</span>
               </div>
             </div>
             <form className="space-y-4">

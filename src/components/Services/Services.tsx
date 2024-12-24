@@ -9,7 +9,7 @@ const services = [
     description: 'Building responsive and performant web applications using modern technologies.',
     Icon: Code2
   },
-  {
+ /* {
     title: 'UI/UX Design',
     description: 'Creating intuitive and beautiful user interfaces with great user experience.',
     Icon: Layout
@@ -18,7 +18,7 @@ const services = [
     title: 'Database Design',
     description: 'Designing efficient and scalable database architectures.',
     Icon: Database
-  },
+  },*/
   {
     title: 'API Development',
     description: 'Building robust and secure RESTful APIs for your applications.',

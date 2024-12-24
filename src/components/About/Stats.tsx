@@ -31,9 +31,9 @@ function StatItem({ number, label, icon, delay = 0 }: StatItemProps) {
 
 export function Stats() {
   const stats = [
-    { icon: <Code size={20} />, number: "5+", label: "Years Experience", delay: 0 },
-    { icon: <Briefcase size={20} />, number: "50+", label: "Projects Completed", delay: 0.1 },
-    { icon: <Users size={20} />, number: "30+", label: "Happy Clients", delay: 0.2 },
+    { icon: <Code size={20} />, number: "2+", label: "Years Experience", delay: 0 },
+    { icon: <Briefcase size={20} />, number: "5+", label: "Projects Completed", delay: 0.1 },
+    { icon: <Users size={20} />, number: "2", label: "Happy Clients", delay: 0.2 },
     { icon: <Award size={20} />, number: "99%", label: "Client Satisfaction", delay: 0.3 }
   ];
 

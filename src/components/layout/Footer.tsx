@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">John Doe</h3>
+            <h3 className="text-xl font-semibold mb-4">Alioune DIME</h3>
             <p className="text-gray-400">Full Stack Developer specializing in modern web technologies and scalable solutions.</p>
           </div>
           
@@ -43,7 +43,7 @@ export function Footer() {
         
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
           <p className="flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by John Doe
+            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Alioune DIME
           </p>
           <p className="mt-2">&copy; {currentYear} All rights reserved.</p>
         </div>

@@ -18,13 +18,13 @@ export function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com" className="text-gray-600 hover:text-gray-900">
+            <a href="https://github.com/AliouneDIME" className="text-gray-600 hover:text-gray-900">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-600 hover:text-gray-900">
+            <a href="https://www.linkedin.com/in/alioune-dim%C3%A9-293213308/" className="text-gray-600 hover:text-gray-900">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
+            <a href="aliounedime92@gmail.com" className="text-gray-600 hover:text-gray-900">
               <Mail className="w-5 h-5" />
             </a>
           </div>
