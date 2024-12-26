@@ -45,9 +45,9 @@ export function Header() {
 
           <div className="hidden md:flex items-center space-x-4">
             {[
-              { Icon: Github, href: 'https://github.com' },
-              { Icon: Linkedin, href: 'https://linkedin.com' },
-              { Icon: Mail, href: 'mailto:your.email@example.com' }
+              { Icon: Github, href: 'https://github.com/AliouneDIME' },
+              { Icon: Linkedin, href: 'https://www.linkedin.com/in/alioune-dim%C3%A9-293213308/' },
+              { Icon: Mail, href: 'aliounedime92@gmail.com' }
             ].map(({ Icon, href }, index) => (
               <motion.a
                 key={index}
