@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
@@ -72,7 +72,7 @@ export function Contact() {
                 </label>
                 <input
                   type="text"
-                  name="user_name"
+                  name="from_name"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200"
                 />
@@ -83,7 +83,7 @@ export function Contact() {
                 </label>
                 <input
                   type="email"
-                  name="user_email"
+                  name="reply_to"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200"
                 />
