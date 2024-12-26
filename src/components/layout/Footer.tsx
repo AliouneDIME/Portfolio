@@ -28,13 +28,13 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/AliouneDIME" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/alioune-dim%C3%A9-293213308/" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:your.email@example.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="aliounedime92@gmail.com" className="text-gray-400 hover:text-white transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
