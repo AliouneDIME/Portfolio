@@ -8,7 +8,7 @@ const education = [
     period: '2023 - 2024',
     description:
       'Specialized in Artificial Intelligence and Machine Learning. Conducted research on deep learning applications in computer vision.',
-    certificateUrl: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=1200&q=80'
+    certificateUrl: '/certificates/esp-professional-degree.pdf'
   },
   {
     institution: 'Ecole Superieure Polytechnique de Dakar (ESP)',
@@ -16,7 +16,7 @@ const education = [
     period: '2021 - 2023',
     description:
       'Graduated with honors. Focus on software engineering and distributed systems.',
-    certificateUrl: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=1200&q=80'
+    certificateUrl: '/certificates/CertifiationCoursera.pdf'
   },
   {
     institution: 'Google Professional Certification',
@@ -24,7 +24,7 @@ const education = [
     period: '2021',
     description:
       'Completed advanced certification in cloud architecture and deployment strategies.',
-    certificateUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80'
+    certificateUrl: '/certificates/google-cloud-cert.pdf'
   },
 ];
 

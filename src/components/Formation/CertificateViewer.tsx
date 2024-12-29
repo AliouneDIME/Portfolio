@@ -2,14 +2,14 @@ import React from 'react';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface CertificateModalProps {
+interface CertificateViewerProps {
   isOpen: boolean;
   onClose: () => void;
-  imageUrl: string;
+  pdfUrl: string;
   title: string;
 }
 
-export function CertificateModal({ isOpen, onClose, imageUrl, title }: CertificateModalProps) {
+export function CertificateViewer({ isOpen, onClose, pdfUrl, title }: CertificateViewerProps) {
   if (!isOpen) return null;
 
   return (
@@ -25,7 +25,7 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title }: Certifica
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="relative max-w-4xl w-full bg-white rounded-xl p-2 shadow-2xl"
+          className="relative w-full max-w-4xl h-[80vh] bg-white rounded-xl p-2 shadow-2xl"
           onClick={e => e.stopPropagation()}
         >
           <button
@@ -39,10 +39,10 @@ export function CertificateModal({ isOpen, onClose, imageUrl, title }: Certifica
             <h3 className="text-xl font-bold text-gray-800">{title}</h3>
           </div>
           
-          <img
-            src={imageUrl}
-            alt={title}
-            className="w-full h-auto rounded-lg"
+          <iframe
+            src={`${pdfUrl}#toolbar=0`}
+            className="w-full h-[calc(100%-2rem)] rounded-lg"
+            title={title}
           />
         </motion.div>
       </motion.div>

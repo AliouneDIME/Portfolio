@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Award } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { CertificateModal } from './CertificateModal';
+import { CertificateViewer } from './CertificateViewer';
 
 interface EducationCardProps {
   institution: string;
@@ -18,7 +18,7 @@ export function EducationCard({
   description,
   certificateUrl 
 }: EducationCardProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   return (
     <>
@@ -39,8 +39,8 @@ export function EducationCard({
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => setIsModalOpen(true)}
-              className="ml-4 p-2 bg-blue-100 rounded-lg text-blue-600 hover:bg-blue-200 transition-colors group-hover:animate-pulse"
+              onClick={() => setIsViewerOpen(true)}
+              className="ml-4 p-2 bg-blue-100 rounded-lg text-blue-600 hover:bg-blue-200 transition-colors"
               title="View Certificate"
             >
               <Award className="w-6 h-6" />
@@ -49,10 +49,10 @@ export function EducationCard({
         </div>
       </motion.div>
 
-      <CertificateModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        imageUrl={certificateUrl || ''}
+      <CertificateViewer
+        isOpen={isViewerOpen}
+        onClose={() => setIsViewerOpen(false)}
+        pdfUrl={certificateUrl || ''}
         title={degree}
       />
     </>
