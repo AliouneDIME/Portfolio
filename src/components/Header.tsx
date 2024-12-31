@@ -1,4 +1,3 @@
-import React from 'react';
 import { Menu, Github, Linkedin, Mail } from 'lucide-react';
 
 export function Header() {
