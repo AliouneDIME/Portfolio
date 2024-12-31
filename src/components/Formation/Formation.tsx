@@ -1,4 +1,3 @@
-import React from 'react';
 import { EducationCard } from './EducationCard';
 
 const education = [
@@ -8,7 +7,7 @@ const education = [
     period: '2023 - 2024',
     description:
       'Specialized in Artificial Intelligence and Machine Learning. Conducted research on deep learning applications in computer vision.',
-    certificateUrl: '/certificates/esp-professional-degree.pdf'
+    certificateUrl: ''
   },
   {
     institution: 'Ecole Superieure Polytechnique de Dakar (ESP)',
@@ -16,15 +15,15 @@ const education = [
     period: '2021 - 2023',
     description:
       'Graduated with honors. Focus on software engineering and distributed systems.',
-    certificateUrl: '/certificates/CertifiationCoursera.pdf'
+    certificateUrl: ''
   },
   {
-    institution: 'Google Professional Certification',
-    degree: 'Cloud Architecture',
-    period: '2021',
+    institution: 'Force-N',
+    degree: 'Cybersécurité',
+    period: '2024',
     description:
-      'Completed advanced certification in cloud architecture and deployment strategies.',
-    certificateUrl: '/certificates/google-cloud-cert.pdf'
+      'Completed advanced certification in Cybersecurity Analyst.',
+    certificateUrl: 'src/components/Formation/certificates/certificat analyste cybersécurité.JPG'
   },
 ];
 

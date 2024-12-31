@@ -1,5 +1,4 @@
-import React from 'react';
-import { Code2, Layout, Database, Globe, Server, Shield } from 'lucide-react';
+import { Code2, Globe, Server, Shield } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
 import { GradientBlob } from '../decorative/GradientBlob';
 
