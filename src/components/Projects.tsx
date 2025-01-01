@@ -6,7 +6,7 @@ const projects = [
     title: 'Authentification System',
     description: 'A full-featured online shopping platform built with React and Node.js',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    technologies: ['Python', 'JavaScript', 'TypeScript', 'SCSS'],
     githubUrl: 'https://github.com/AliouneDIME/Authentification-2F-OTP-QR.git ',
     liveUrl: 'https://example.com',
   },
