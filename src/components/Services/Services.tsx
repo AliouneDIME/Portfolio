@@ -1,6 +1,7 @@
-import { Code2, Globe, Server, Shield } from 'lucide-react';
+import { Code, Code2, Code2Icon, Globe, LucideCode2, LucideQrCode, Server, Shield } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
 import { GradientBlob } from '../decorative/GradientBlob';
+import { code } from 'framer-motion/m';
 
 const services = [
   {
@@ -8,12 +9,12 @@ const services = [
     description: 'Building responsive and performant web applications using modern technologies.',
     Icon: Code2
   },
- /* {
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and beautiful user interfaces with great user experience.',
-    Icon: Layout
-  },
   {
+    title: 'Software Development',
+    description: 'Designing and developing custom applications to meet specific client needs.',
+    Icon: LucideCode2
+  },
+   /*  {
     title: 'Database Design',
     description: 'Designing efficient and scalable database architectures.',
     Icon: Database
@@ -22,6 +23,11 @@ const services = [
     title: 'API Development',
     description: 'Building robust and secure RESTful APIs for your applications.',
     Icon: Globe
+  },
+  {
+    title: 'Frontend Development',  
+    description: 'Creating intuitive and engaging user interfaces for web applications and websites.',  
+    Icon: Server
   },
   {
     title: 'Backend Development',

@@ -6,7 +6,7 @@ const education = [
     degree: 'Professional degree in Software Engineering and Operating System',
     period: '2023 - 2024',
     description:
-      'Specialized in Artificial Intelligence and Machine Learning. Conducted research on deep learning applications in computer vision.',
+      'Specialized in web development and distributed applications. Conducting research on optimizing the performance of cloud applications and integrating microservices for a scalable architecture.',
     certificateUrl: ''
   },
   {
@@ -14,7 +14,7 @@ const education = [
     degree: 'Higher Diploma in Technology',
     period: '2021 - 2023',
     description:
-      'Graduated with honors. Focus on software engineering and distributed systems.',
+      'Technical support for users and training in system usage and Proficiency in programming languages',
     certificateUrl: ''
   },
   {

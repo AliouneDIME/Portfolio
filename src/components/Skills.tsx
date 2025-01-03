@@ -7,19 +7,19 @@ const skills = [
   {
     category: 'Frontend',
     icon: <Code2 className="w-6 h-6" />,
-    items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Redux'],
+    items: ['React', 'TypeScript', 'JavaScript', 'Angular', 'Tailwind CSS', 'HTML&CSS', 'SCSS'],
     color: 'from-blue-400 to-cyan-400',
   },
   {
     category: 'Backend',
     icon: <Server className="w-6 h-6" />,
-    items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs'],
+    items: ['Node.js', 'Express','Python', 'Java','PHP','Django','SpringBoot' , 'SQL','PostgreSQL', 'MongoDB', 'REST APIs'],
     color: 'from-purple-400 to-pink-400',
   },
   {
     category: 'Tools & Others',
     icon: <Wrench className="w-6 h-6" />,
-    items: ['Git', 'Docker', 'AWS', 'Jest', 'Figma'],
+    items: ['Git', 'Docker', 'GitHub','GitLab', 'Agile', 'Scrum'],
     color: 'from-orange-400 to-red-400',
   },
 ];
