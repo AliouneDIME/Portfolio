@@ -19,11 +19,11 @@ const projects = [
     liveUrl: 'https://example.com',
   },
   {
-    title: 'Weather Dashboard',
-    description: 'A beautiful weather application with detailed forecasts',
+    title: 'Health Services',
+    description: 'An application that offers services including online consultation, remote appointment booking',
     image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b',
-    technologies: ['React', 'TypeScript', 'OpenWeather API'],
-    githubUrl: 'https://github.com',
+    technologies: ['Php', 'Lame'],
+    githubUrl: 'https://github.com/AliouneDIME/ServicesSante.git',
     liveUrl: 'https://example.com',
   },
 ];
