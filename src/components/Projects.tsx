@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Authentification System',
     description: 'A full-featured online shopping platform built with React and Node.js',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
+    image: 'https://media.istockphoto.com/id/1427473864/photo/secure-access-to-users-personal-information-concept-of-cyber-security-in-biometric.jpg?s=1024x1024&w=is&k=20&c=Ac0ziEh-dA-qMmEidcL77SfwJ1Vt2vQRr7SNhmkYtFQ=',
     technologies: ['Python', 'JavaScript', 'TypeScript', 'SCSS'],
     githubUrl: 'https://github.com/AliouneDIME/Authentification-2F-OTP-QR.git ',
     liveUrl: 'https://example.com',
