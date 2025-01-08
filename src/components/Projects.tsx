@@ -8,15 +8,15 @@ const projects = [
     image: 'https://plus.unsplash.com/premium_photo-1700830193661-f6822dca5eee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3lzdGVtJTIwYXV0aGVudGlpY2F0aW9ufGVufDB8fDB8fHww',
     technologies: ['Python', 'JavaScript', 'TypeScript', 'SCSS'],
     githubUrl: 'https://github.com/AliouneDIME/Authentification-2F-OTP-QR.git ',
-    liveUrl: 'https://example.com',
+    liveUrl: '',
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management tool with real-time updates',
-    image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91',
+    title: 'TrendyShop',
+    description: 'A modern online shopping application that focuses on providing a seamless and engaging shopping experience for fashion enthusiasts.',
+    image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?',
     technologies: ['React', 'Firebase', 'Material-UI'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/AliouneDIME/TrendyShop.git',
+    liveUrl: 'https://trendyshopp.netlify.app/',
   },
   {
     title: 'Health Services',
@@ -24,7 +24,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&auto=format&fit=crop&q=60&ixlib=rb-',
     technologies: ['Php', 'Laravel','Lame'],
     githubUrl: 'https://github.com/AliouneDIME/ServicesSante.git',
-    liveUrl: 'https://example.com',
+    liveUrl: '',
   },
 ];
 
