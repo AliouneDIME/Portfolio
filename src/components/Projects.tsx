@@ -22,7 +22,7 @@ const projects = [
     title: 'Health Services',
     description: 'An application that offers services including online consultation, remote appointment booking',
     image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&auto=format&fit=crop&q=60&ixlib=rb-',
-    technologies: ['Php', 'Lame'],
+    technologies: ['Php', 'Laravel','Lame'],
     githubUrl: 'https://github.com/AliouneDIME/ServicesSante.git',
     liveUrl: 'https://example.com',
   },
