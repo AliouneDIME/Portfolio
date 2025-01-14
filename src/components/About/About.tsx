@@ -60,9 +60,7 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                When I'm not coding, you can find me contributing to open-source
-                projects, writing technical blog posts, or mentoring aspiring
-                developers.
+                
               </motion.p>
             </div>
           </div>
