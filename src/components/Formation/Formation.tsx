@@ -7,7 +7,7 @@ const education = [
     period: '2023 - 2024',
     description:
       'Specialized in web development and distributed applications. Conducting research on optimizing the performance of cloud applications and integrating microservices for a scalable architecture.',
-    certificateUrl: ''
+    certificateUrl: 'src/components/Formation/certificates/certificatAnalysteCybersécurité.JPG'
   },
   {
     institution: 'Ecole Superieure Polytechnique de Dakar (ESP)',
@@ -15,7 +15,7 @@ const education = [
     period: '2021 - 2023',
     description:
       'Technical support for users and training in system usage and Proficiency in programming languages',
-    certificateUrl: ''
+    certificateUrl: 'src/components/Formation/certificates/certificatAnalysteCybersécurité.JPG'
   },
   {
     institution: 'Force-N',
