@@ -39,7 +39,7 @@ export function About() {
                 transition={{ duration: 0.5 }}
               >
                 Hi, I'm Alioune Dime, a passionate full-stack developer with
-                over 2 years of experience in creating web applications. I
+                over 3 years of experience in creating web applications. I
                 specialize in building scalable, user-friendly solutions that
                 solve real-world problems.
               </motion.p>

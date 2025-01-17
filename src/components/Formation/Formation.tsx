@@ -23,7 +23,7 @@ const education = [
     period: '2024',
     description:
       'Completed advanced certification in Cybersecurity Analyst.',
-    certificateUrl: ''
+    certificateUrl: 'src/components/Formation/certificates/CertificatAnalysteCybersécurité.pdf'
   },
 ];
 
