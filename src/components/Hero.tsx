@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Code2, Terminal, Database, Cloud } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FloatingIcons } from './decorative/FloatingIcons';
 
@@ -56,12 +56,16 @@ export function Hero() {
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-secondary-400/20 rounded-3xl blur-2xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
                 alt="Coding Environment"
                 className="relative rounded-3xl w-full aspect-square object-cover shadow-2xl"
+                loading="eager"
+                fetchPriority="high"
+                width="800"
+                height="800"
               />
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
-                <Code2 className="w-8 h-8 text-primary-600" />
+                <ArrowRight className="w-8 h-8 text-primary-600" />
               </div>
             </div>
           </motion.div>
