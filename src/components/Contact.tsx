@@ -195,7 +195,6 @@ export function Contact() {
 
   const contactLinks = [
     { Icon: Mail,     label: 'Email',      value: 'aliounedime92@gmail.com',                           href: 'mailto:aliounedime92@gmail.com',                            accent: '#c9a84c', delay: 0.3  },
-    { Icon: Phone,    label: 'Téléphone',  value: '+221 77 098 71 88',                                 href: 'tel:+221770987188',                                         accent: '#00d4ff', delay: 0.38 },
     { Icon: MapPin,   label: 'Localisation', value: 'Sicap Liberté 1, Dakar — SN',                    href: '#',                                                         accent: '#ff2d78', delay: 0.44 },
     { Icon: Github,   label: 'GitHub',     value: 'github.com/AliouneDIME',                            href: 'https://github.com/AliouneDIME',                            accent: '#e8d5a3', delay: 0.5  },
     { Icon: Linkedin, label: 'LinkedIn',   value: 'alioune-dimé',                                      href: 'https://www.linkedin.com/in/alioune-dim%C3%A9-293213308/', accent: '#0077b5', delay: 0.56 },

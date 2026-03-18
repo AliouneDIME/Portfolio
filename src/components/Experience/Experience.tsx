@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { downloadPdf } from '../../../motion/utils/pdfUtils';
 import { Briefcase, MapPin, Calendar, ExternalLink, ArrowRight } from 'lucide-react';
 
 const experiences = [
@@ -7,10 +8,10 @@ const experiences = [
     role: 'Stagiaire Administrateur Systèmes & Support ITSM',
     company: 'Ministère de l\'Intégration Africaine, des Affaires Étrangères et des Sénégalais de l\'Extérieur',
     location: 'Dakar, Sénégal',
-    period: 'Novembre 2025 — Mars 2026',
+    period: 'Novembre 2025 — Fevrier 2026',
     type: 'Stage',
     accent: '#c9a84c',
-    current: true,
+    current: false,
     logo: '🏛️',
     tasks: [
       'Maintenance du matériel informatique et gestion du parc',
@@ -256,22 +257,21 @@ export function Experience() {
               </motion.div>
 
               {/* CV download */}
-              <motion.a
-                href="/CV_Alioune_DIME_EN_1.pdf"
-                download
+              <motion.button
+                onClick={() => downloadPdf('/CV_Alioune_DIME_EN_1.pdf', 'CV_Alioune_DIME.pdf')}
                 initial={{ opacity: 0, y: 10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.65, duration: 0.5 }}
                 whileHover={{ scale: 1.02, x: 4 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-between w-full bg-gold/10 border border-gold/25 rounded-2xl px-6 py-4 group transition-all hover:bg-gold/15 hover:border-gold/40"
+                className="flex items-center justify-between w-full bg-gold/10 border border-gold/25 rounded-2xl px-6 py-4 group transition-all hover:bg-gold/15 hover:border-gold/40 text-left"
               >
                 <div>
                   <div className="font-display font-700 text-gold text-sm">Télécharger le CV</div>
                   <div className="text-chalk/35 text-xs mt-0.5">PDF · Alioune DIME · Anglais</div>
                 </div>
                 <ExternalLink size={16} className="text-gold/60 group-hover:text-gold transition-colors" />
-              </motion.a>
+              </motion.button>
             </div>
           </div>
         </div>

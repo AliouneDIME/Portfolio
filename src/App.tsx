@@ -1,81 +1,101 @@
-import { useEffect, useRef } from 'react';
-import { Header } from './components/layout/Header';
-import { Hero } from './components/Hero';
-import { About } from './components/About/About';
-import { Experience } from './components/Experience/Experience';
-import { Services } from './components/Services/Services';
-import { Certifications } from './components/Certifications';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { Contact } from './components/Contact';
-import { Footer } from './components/layout/Footer';
+import { useEffect, useRef, lazy, Suspense } from 'react';
+import { Header }   from './components/layout/Header';
+import { Footer }   from './components/layout/Footer';
+import { Hero }     from './components/Hero';
 import { StarField } from './components/decorative/StarField';
 
-export default function App() {
-  const cursorDot = useRef<HTMLDivElement>(null);
-  const cursorRing = useRef<HTMLDivElement>(null);
+/**
+ * All sections below the fold are lazy-loaded.
+ * Vite splits each into its own JS chunk — the initial bundle
+ * only contains react, framer-motion, Header, Hero, StarField.
+ */
+const About          = lazy(() => import('./components/About/About').then(m => ({ default: m.About })));
+const Experience     = lazy(() => import('./components/Experience/Experience').then(m => ({ default: m.Experience })));
+const Services       = lazy(() => import('./components/Services/Services').then(m => ({ default: m.Services })));
+const Certifications = lazy(() => import('./components/Certifications').then(m => ({ default: m.Certifications })));
+const Projects       = lazy(() => import('./components/Projects').then(m => ({ default: m.Projects })));
+const Skills         = lazy(() => import('./components/Skills').then(m => ({ default: m.Skills })));
+const ITAdmin        = lazy(() => import('./components/Itadmin').then(m => ({ default: m.ITAdmin })));
+const Contact        = lazy(() => import('./components/Contact').then(m => ({ default: m.Contact })));
 
+/** Minimal placeholder while a lazy section loads */
+function SectionSkeleton() {
+  return <div className="h-28 w-full" aria-hidden="true" />;
+}
+
+export default function App() {
+  const dotRef  = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
+
+  /** Custom cursor — smooth lag ring via rAF, zero React state */
   useEffect(() => {
-    const dot = cursorDot.current;
-    const ring = cursorRing.current;
+    const dot  = dotRef.current;
+    const ring = ringRef.current;
     if (!dot || !ring) return;
 
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
+    let mx = 0, my = 0, rx = 0, ry = 0, id: number;
 
     const onMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+      mx = e.clientX;
+      my = e.clientY;
+      // Dot follows instantly (no lag feels snappy)
+      dot.style.transform = `translate(${mx - 4}px,${my - 4}px)`;
     };
 
-    let rafId: number;
-    const animate = () => {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      ring.style.transform = `translate(${ringX - 18}px, ${ringY - 18}px)`;
-      rafId = requestAnimationFrame(animate);
+    const tick = () => {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.transform = `translate(${Math.round(rx - 18)}px,${Math.round(ry - 18)}px)`;
+      id = requestAnimationFrame(tick);
     };
-    animate();
+    id = requestAnimationFrame(tick);
 
-    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mousemove', onMove, { passive: true });
     return () => {
       window.removeEventListener('mousemove', onMove);
-      cancelAnimationFrame(rafId);
+      cancelAnimationFrame(id);
     };
   }, []);
 
   return (
     <>
-      {/* Custom cursor */}
-      <div ref={cursorDot} className="cursor-dot" />
-      <div ref={cursorRing} className="cursor-ring" />
+      {/* ── Custom cursor (hidden on touch devices via CSS) ── */}
+      <div ref={dotRef}  className="cursor-dot"  aria-hidden="true" />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
 
-      {/* Atmosphere */}
-      <div className="noise" aria-hidden />
-      <div className="scanlines" aria-hidden />
+      {/* ── Atmosphere layers (fixed, cheap, composited) ── */}
+      <div className="noise"     aria-hidden="true" />
+      <div className="scanlines" aria-hidden="true" />
       <StarField />
 
-      {/* Background grid */}
+      {/* ── Background grid (static, no repaints) ── */}
       <div
         className="fixed inset-0 pointer-events-none z-0"
         style={{
-          backgroundImage: 'linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px)',
+          backgroundImage:
+            'linear-gradient(rgba(201,168,76,0.03) 1px,transparent 1px),' +
+            'linear-gradient(90deg,rgba(201,168,76,0.03) 1px,transparent 1px)',
           backgroundSize: '60px 60px',
         }}
+        aria-hidden="true"
       />
 
+      {/* ── Page ── */}
       <div className="relative z-10">
         <Header />
         <main>
+          {/* Above the fold — no Suspense needed */}
           <Hero />
-          <About />
-          <Experience />
-          <Services />
-          <Certifications />
-          <Projects />
-          <Skills />
-          <Contact />
+
+          {/* Below the fold — each in its own Suspense boundary */}
+          <Suspense fallback={<SectionSkeleton />}><About /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Experience /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Services /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Certifications /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Projects /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Skills /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><ITAdmin /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Contact /></Suspense>
         </main>
         <Footer />
       </div>

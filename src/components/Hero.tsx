@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
+import { downloadPdf } from '../../motion/utils/pdfUtils';
 
 const MARQUEE_ITEMS = ['React', 'TypeScript', 'Node.js', 'Python', 'Django', 'SpringBoot', 'PostgreSQL', 'Docker', 'Cybersecurity', 'REST API'];
 
@@ -107,14 +108,14 @@ export function Hero() {
               >
                 View Work <ArrowRight size={15} />
               </motion.a>
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={() => downloadPdf('/CV_Alioune_DIME_EN_1.pdf', 'CV_Alioune_DIME.pdf')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 className="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 border border-chalk/20 text-chalk/70 hover:text-chalk hover:border-chalk/40 font-display text-sm rounded-lg transition-all"
               >
-                <Download size={14} /> Download CV
-              </motion.a>
+                <Download size={14} /> Télécharger CV
+              </motion.button>
             </motion.div>
 
             {/* Stats row */}

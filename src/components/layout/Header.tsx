@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { downloadPdf } from '../../../motion/utils/pdfUtils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Menu, X, Download, ExternalLink } from 'lucide-react';
 
@@ -9,6 +10,7 @@ const navItems = [
   { label: 'Certifications', id: 'certifications' },
   { label: 'Projets',        id: 'projects' },
   { label: 'Skills',         id: 'skills' },
+  { label: 'IT/SysAdmin',   id: 'it-admin' },
   { label: 'Contact',        id: 'contact' },
 ];
 
@@ -161,15 +163,14 @@ export function Header() {
 
             <div className="w-px h-4 bg-chalk/10 mx-0.5" />
 
-            <motion.a
-              href="/CV_Alioune_DIME_EN_1.pdf"
-              download
+            <motion.button
+              onClick={() => downloadPdf('/CV_Alioune_DIME_EN_1.pdf', 'CV_Alioune_DIME.pdf')}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-display font-600 text-chalk/50 hover:text-chalk/80 border border-chalk/10 hover:border-chalk/20 transition-all"
             >
               <Download size={11} /> CV
-            </motion.a>
+            </motion.button>
 
             <motion.button
               onClick={() => handleNav('contact')}
@@ -314,13 +315,12 @@ export function Header() {
 
               {/* Drawer footer */}
               <div className="px-5 py-5 border-t border-chalk/6 space-y-2.5">
-                <a
-                  href="/CV_Alioune_DIME_EN_1.pdf"
-                  download
+                <button
+                  onClick={() => downloadPdf('/CV_Alioune_DIME_EN_1.pdf', 'CV_Alioune_DIME.pdf')}
                   className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl border border-chalk/12 text-chalk/55 hover:text-chalk text-[13px] font-display font-600 transition-all"
                 >
                   <Download size={12} /> Télécharger le CV
-                </a>
+                </button>
                 <button
                   onClick={() => handleNav('contact')}
                   className="w-full py-2.5 rounded-xl text-void text-[13px] font-display font-700 glow"

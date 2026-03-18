@@ -1,39 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="h0HmV22MVikbFC-4eUUD_g4Iq6LdHHr8pksgmstl0pE" />
+    <meta name="description" content="Alioune DIME — Full Stack Developer & Cybersecurity Analyst. Dakar, Sénégal." />
+    <meta name="theme-color" content="#06060c" />
     <title>Alioune DIME</title>
-        <!-- Preload hero image -->
-        <link 
-        rel="preload" 
-        as="image" 
-        href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
-        fetchpriority="high"
-      />
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQ49FLLPB"></script>
-  <!--Google adsense-->
-  <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5603387682234257"
-     crossorigin="anonymous"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-VCQ49FLLPB');
-  </script>
+    <!-- Preconnect so fonts load faster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Only the weights actually used — keeps font payload small -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload hero image (LCP element) -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+      fetchpriority="high"
+    />
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-5603387682234257">
-    </amp-auto-ads>
   </body>
 </html>

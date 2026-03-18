@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { downloadPdf } from '../../../motion/utils/pdfUtils';
 import { Github, Linkedin, Mail, ArrowUp, Heart, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 const footerNav = [
@@ -123,7 +124,6 @@ export function Footer() {
             <div className="space-y-2">
               {[
                 { Icon: MapPin, val: 'Dakar, Sénégal — Sicap Liberté 1' },
-                { Icon: Phone,  val: '+221 77 098 71 88' },
                 { Icon: Mail,   val: 'aliounedime92@gmail.com' },
               ].map(({ Icon, val }) => (
                 <div key={val} className="flex items-start gap-2 text-chalk/35 text-[11px]">

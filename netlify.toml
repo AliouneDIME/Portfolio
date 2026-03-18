@@ -4,5 +4,24 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to   = "/index.html"
   status = 200
+
+# Cache compiled assets forever (they have content-hash filenames)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Serve PDFs with correct MIME type + short cache
+[[headers]]
+  for = "/certificates/*.pdf"
+  [headers.values]
+    Content-Type  = "application/pdf"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Type  = "application/pdf"
+    Cache-Control = "public, max-age=86400"

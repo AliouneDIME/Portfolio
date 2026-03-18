@@ -12,7 +12,7 @@ export function Footer() {
               <span className="text-chalk/30 mx-1">/</span>
               <span className="text-chalk/50 text-sm font-body font-400">Alioune DIME</span>
             </div>
-            <div className="text-chalk/25 text-xs">Full Stack Developer · Dakar, SN</div>
+            <div className="text-chalk/25 text-xs">IT Engineering Assistant · Dakar, SN</div>
           </div>
 
           <div className="flex items-center gap-4">
