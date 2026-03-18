@@ -222,7 +222,7 @@ export function Footer() {
               className="rounded-xl p-4"
               style={{ background: 'rgba(20,20,32,0.6)', border: '1px solid rgba(201,168,76,0.1)' }}
             >
-              <div className="font-display font-800 text-2xl text-gold mb-0.5">7</div>
+              <div className="font-display font-800 text-2xl text-gold mb-0.5">6</div>
               <div className="text-chalk/35 text-xs">Certifications obtenues</div>
               <div className="text-chalk/20 text-[10px] mt-0.5">Coursera · FORCE-N · AWS · CodeSignal</div>
             </div>
