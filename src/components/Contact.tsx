@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import {
-  Mail, MapPin, Github, Linkedin, Phone,
+  Mail, MapPin, Github, Linkedin,
   Send, CheckCircle2, AlertCircle, ArrowUpRight,
   MessageSquare, User, AtSign, Sparkles, Clock, Globe,
 } from 'lucide-react';
