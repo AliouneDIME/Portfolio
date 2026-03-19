@@ -10,7 +10,8 @@ const navItems = [
   { label: 'Certifications', id: 'certifications' },
   { label: 'Projets',        id: 'projects' },
   { label: 'Skills',         id: 'skills' },
-  { label: 'IT/SysAdmin',   id: 'it-admin' },
+  { label: 'IT/SysAdmin',    id: 'it-admin' },
+  { label: 'Blog',           id: 'blog' },
   { label: 'Contact',        id: 'contact' },
 ];
 

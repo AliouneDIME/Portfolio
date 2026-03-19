@@ -16,6 +16,7 @@ const Certifications = lazy(() => import('./components/Certifications').then(m =
 const Projects       = lazy(() => import('./components/Projects').then(m => ({ default: m.Projects })));
 const Skills         = lazy(() => import('./components/Skills').then(m => ({ default: m.Skills })));
 const ITAdmin        = lazy(() => import('./components/Itadmin').then(m => ({ default: m.ITAdmin })));
+const Blog           = lazy(() => import('./components/blog').then(m => ({ default: m.Blog })));
 const Contact        = lazy(() => import('./components/Contact').then(m => ({ default: m.Contact })));
 
 /** Minimal placeholder while a lazy section loads */
@@ -95,6 +96,7 @@ export default function App() {
           <Suspense fallback={<SectionSkeleton />}><Projects /></Suspense>
           <Suspense fallback={<SectionSkeleton />}><Skills /></Suspense>
           <Suspense fallback={<SectionSkeleton />}><ITAdmin /></Suspense>
+          <Suspense fallback={<SectionSkeleton />}><Blog /></Suspense>
           <Suspense fallback={<SectionSkeleton />}><Contact /></Suspense>
         </main>
         <Footer />
