@@ -90,8 +90,6 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.7 }}
               className="text-chalk/50 text-lg leading-relaxed max-w-md mb-10"
             >
-              Crafting scalable web applications and secure digital experiences.
-              3+ years turning complex problems into elegant solutions.
             </motion.p>
 
             <motion.div
@@ -126,9 +124,9 @@ export function Hero() {
               className="flex gap-10 mt-14 pt-10 border-t border-chalk/8"
             >
               {[
-                { val: '3+', label: 'Années exp.' },
+                { val: '..', label: 'Années exp.' },
                 { val: '3+', label: 'Projets livrés' },
-                { val: '7', label: 'Certifications' },
+                { val: '6', label: 'Certifications' },
               ].map(({ val, label }) => (
                 <div key={label}>
                   <div className="font-display text-2xl font-800 text-gold">{val}</div>
