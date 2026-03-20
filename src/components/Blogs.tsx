@@ -394,7 +394,7 @@ function SkeletonCard() {
 ──────────────────────────────────────────────────────────────── */
 type Filter = 'Tous' | 'AI' | 'Cybersécurité' | 'Tech' | 'Dev';
 const FILTERS: Filter[] = ['Tous', 'AI', 'Cybersécurité', 'Tech', 'Dev'];
-const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
+const REFRESH_INTERVAL = 360 * 60 * 1000; // 6H Heures
 
 export function Blog() {
   const ref = useRef<HTMLDivElement>(null);
@@ -631,7 +631,7 @@ export function Blog() {
           </div>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#3fb950] animate-pulse" />
-            Actualisation automatique toutes les 5 min — articles filtrés par date (12 mois max)
+            Actualisation automatique toutes les 6H — articles filtrés par date 
           </div>
         </motion.div>
 
