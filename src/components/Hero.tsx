@@ -66,7 +66,7 @@ export function Hero() {
               className="flex items-center gap-3 mb-8"
             >
               <div className="w-8 h-px bg-gold/60" />
-              <span className="divider-glyph">IT Engineering Assistant · Dakar, SN</span>
+              <span className="divider-glyph">IT Engineering Assistant - Full Stack Developer -  · Dakar, SN</span>
             </motion.div>
 
             <motion.h1
